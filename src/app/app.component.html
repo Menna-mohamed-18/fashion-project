@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<button
+  (click)="toggleDarkMode()"
+  class="fixed top-4 right-16 z-50 p-2 rounded-full bg-gray-200 dark:bg-[#423C39] text-black dark:text-white shadow-md"
+>
+  <i *ngIf="!isDarkMode" class="fas fa-moon"></i>
+  <i *ngIf="isDarkMode" class="fas fa-sun"></i>
+</button>
+
+<router-outlet> </router-outlet>
+
+<ngx-spinner
+  bdColor="rgba(0, 0, 0,0.6)"
+  template="<img class=' rounded-full overflow-hidden w-24 h-24  ' src='/ChatGPT Image Jul 27, 2025, 06_27_31 AM.png' />"
+>
+  <h3 class="text-white">Loading...</h3>
+</ngx-spinner>
+<app-footer></app-footer>
